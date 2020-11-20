@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-nov-2020 14:11:16 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="baloncesto" name="dam.Jugadores" table="jugadores">
+    <id name="codigo" type="int">
+      <column name="Codigo"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="dam.Equipos" fetch="select" name="equipos">
+      <column length="20" name="Nombre_equipo"/>
+    </many-to-one>
+    <property name="nombre" type="string">
+      <column length="30" name="Nombre"/>
+    </property>
+    <property name="procedencia" type="string">
+      <column length="20" name="Procedencia"/>
+    </property>
+    <property name="altura" type="string">
+      <column length="4" name="Altura"/>
+    </property>
+    <property name="peso" type="java.lang.Integer">
+      <column name="Peso"/>
+    </property>
+    <property name="posicion" type="string">
+      <column length="12" name="Posicion"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="estadisticases" table="estadisticas">
+      <key>
+        <column name="Jugador" not-null="true"/>
+      </key>
+      <one-to-many class="dam.Estadisticas"/>
+    </set>
+  </class>
+</hibernate-mapping>
