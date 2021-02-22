@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+
+Name: javaBeans/Pedido.class
+Java-Bean: True
+
+Name: javaBeans/Producto.class
+Java-Bean: True
+
+Name: javaBeans/Ventas.class
+Java-Bean: False
+
+Name: javaBeans/BaseDatos.class
+Java-Bean: False

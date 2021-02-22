@@ -62,7 +62,7 @@ public class Ejercicio1 {
         String fecha_sistema=""+calendar.get(Calendar.YEAR)+"-"+(calendar.get(Calendar.MONTH)+1)+"-"+calendar.get(Calendar.DAY_OF_MONTH);
        try{
           
-           String driver = "org.exist.xmldb.DatabaseImpl"; // driver para eXist
+            String driver = "org.exist.xmldb.DatabaseImpl"; // driver para eXist
             Class c1 = Class.forName(driver);
             Database database = (Database) c1.newInstance(); // Instancia de la BD
             DatabaseManager.registerDatabase( database);
